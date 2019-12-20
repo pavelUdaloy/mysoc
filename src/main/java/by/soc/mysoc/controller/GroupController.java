@@ -193,7 +193,6 @@ public class GroupController {
         Group groupById = getGroupById(groupID);
         Post postById = getPostById(groupById, postID);
         Comment commentById = getCommentById(postById, commentID);
-        System.out.println("test");
         User user = tokenService.getUser(token.getToken());
         if (generalCheck(token, bindingResult, 0) &&
                 commentById != null && user.equals(commentById.getAdmin())) {
