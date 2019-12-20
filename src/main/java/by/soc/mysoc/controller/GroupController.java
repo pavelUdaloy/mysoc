@@ -192,6 +192,7 @@ public class GroupController {
                                  @PathVariable Integer groupID, @PathVariable Integer postID) {
         Group groupById = getGroupById(groupID);
         Post postById = getPostById(groupById, postID);
+        System.out.println("br");
         Comment commentById = getCommentById(postById, commentID);
         User user = tokenService.getUser(token.getToken());
         if (generalCheck(token, bindingResult, 0) &&
