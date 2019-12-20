@@ -1,0 +1,374 @@
+POST http://localhost:8080/
+Content-Type: application/json
+
+{
+  "email": "pasha@mail.ru",
+  "password": "12345678"
+}
+
+###
+POST http://localhost:8080/reg
+Content-Type: application/json
+
+{
+  "firstName": "Pasha",
+  "lastName": "Udaloi",
+  "email": "pasha@mail.ru",
+  "password": "12345678"
+}
+
+###
+POST http://localhost:8080/logout
+Content-Type: application/json
+
+{
+  "token": 7563141
+}
+
+###
+POST http://localhost:8080/feed
+Content-Type: application/json
+
+{
+  "token": 4051923
+}
+
+###
+POST http://localhost:8080/edit
+Content-Type: application/json
+
+{
+  "token": {
+    "token": 7942510
+  },
+  "firstName": "newFirst",
+  "lastName": "newLastName",
+  "birthDate": 1576775408357,
+  "password": "12345678"
+}
+
+###
+GET http://localhost:8080/3656787
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/all
+Content-Type: application/json
+
+###
+
+POST http://localhost:8080/chats
+Content-Type: application/json
+
+{
+  "token": 7942510
+}
+
+###
+
+POST http://localhost:8080/chats/add
+Content-Type: application/json
+
+{
+  "token": {
+    "token": 4681347
+  },
+  "chat": {
+    "participants": [
+      {
+        "firstName": "Pasha",
+        "lastName": "Udaloi",
+        "userID": 3809838,
+        "birthDate": 1576798505177,
+        "role": {
+          "role": "USER",
+          "level": 1
+        },
+        "email": "pasha@mail.ru",
+        "password": "12345678"
+      },
+      {
+        "firstName": "Pasha",
+        "lastName": "Udaloi",
+        "userID": 3206025,
+        "birthDate": 1576798510112,
+        "role": {
+          "role": "USER",
+          "level": 1
+        },
+        "email": "pasha@mail.ru1",
+        "password": "12345678"
+      }
+    ],
+    "name": "chat1"
+  }
+}
+
+###
+
+POST http://localhost:8080/chats/1051258
+Content-Type: application/json
+
+{
+  "token": 7942510
+}
+
+###
+
+POST http://localhost:8080/chats/1051258/send
+Content-Type: application/json
+
+{
+  "token": {
+    "token": 7942510
+  },
+  "text": "222222222222222222222222222222222222"
+}
+
+###
+
+POST http://localhost:8080/groups
+Content-Type: application/json
+
+{
+  "token": 7045725
+}
+
+###
+
+GET http://localhost:8080/groups
+Content-Type: application/json
+
+###
+
+POST http://localhost:8080/groups/add
+Content-Type: application/json
+
+{
+  "token": {
+    "token": 5632498
+  },
+  "group": {
+    "name": "Default Group Name222222222222",
+    "admin": {
+      "firstName": "Pasha",
+      "lastName": "Udaloi",
+      "userID": 3946406,
+      "birthDate": 1576839278110,
+      "role": {
+        "role": "USER",
+        "level": 1
+      },
+      "email": "pasha@mail.ru",
+      "password": "12345678"
+    }
+  }
+}
+
+###
+
+GET http://localhost:8080/groups/4024710
+Content-Type: application/json
+
+###
+
+POST http://localhost:8080/groups/4998964/delete
+Content-Type: application/json
+
+{
+  "token": 7278002
+}
+
+###
+
+POST http://localhost:8080/groups/4902884/edit
+Content-Type: application/json
+
+{
+  "token": 9502664,
+  "name": "new Default Group Name"
+}
+
+###
+
+GET http://localhost:8080/groups/4205740/posts
+Content-Type: application/json
+
+###
+
+POST http://localhost:8080/groups/4205740/add
+Content-Type: application/json
+
+{
+  "token": {
+    "token": 7563141
+  },
+  "post": {
+    "text": "default Post Text",
+    "title": "default Post Title"
+  }
+}
+
+###
+
+GET http://localhost:8080/groups/4205740/5195438
+Content-Type: application/json
+
+###
+
+POST http://localhost:8080/groups/4998964/5735936/delete
+Content-Type: application/json
+
+{
+  "token": 7278002
+}
+
+###
+
+POST http://localhost:8080/groups/4902884/5375856/edit
+Content-Type: application/json
+
+{
+  "text": "new Default Post Text",
+  "title": "new default Post Title",
+  "token": 9502664
+}
+
+###
+
+POST http://localhost:8080/groups/4205740/5195438/add
+Content-Type: application/json
+
+{
+  "token": {
+    "token": 4051923
+  },
+  "comment": {
+    "text": "Default Comment Text vers2",
+    "admin": {
+      "firstName": "Pasha",
+      "lastName": "Udaloi",
+      "userID": 3144702,
+      "birthDate": 1576839797316,
+      "role": {
+        "role": "USER",
+        "level": 1
+      },
+      "email": "pasha@mail.ru1",
+      "password": "12345678"
+    }
+  }
+}
+
+###
+
+GET http://localhost:8080/groups/4205740/5195438/comments
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/groups/4800596/5733780/2523373
+Content-Type: application/json
+
+###
+
+POST http://localhost:8080/groups/4800596/5733780/2523373/delete
+Content-Type: application/json
+
+{
+  "token": 8699497
+}
+
+###
+
+POST http://localhost:8080/groups/4902884/5375856/2981254/edit
+Content-Type: application/json
+
+{
+  "text": "new Default Comment Text",
+  "token": 9502664
+}
+
+###
+
+POST http://localhost:8080/groups/4205740/subscribe
+Content-Type: application/json
+
+{
+  "token": 7045725
+}
+
+###
+
+POST http://localhost:8080/groups/4205740/unsubscribe
+Content-Type: application/json
+
+{
+  "token": 7045725
+}
+
+###
+
+POST http://localhost:8080/3665937/addTag
+Content-Type: application/json
+
+{
+  "token": 5632498,
+  "tag": {
+    "name": "krytoi"
+  }
+}
+
+###
+
+POST http://localhost:8080/groups/4024710/addTag
+Content-Type: application/json
+
+{
+"token": 5632498,
+"tag": {
+"name": "krytoi"
+}
+}
+
+###
+
+POST http://localhost:8080/groups/1234567/1234567/addTag
+Content-Type: application/json
+
+{
+  "token": 7942510,
+  "tag": {
+    "name": "krytoi"
+  }
+}
+
+###
+
+POST http://localhost:8080/groups/1234567/1234567/1234567/addTag
+Content-Type: application/json
+
+{
+  "token": 3932731,
+  "tag": {
+    "name": "krytoi"
+  }
+}
+
+###
+
+GET http://localhost:8080/tags
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/tags/6165401
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/tags/find?tagName=krytoi&range=all
+Content-Type: application/json
+
+###
