@@ -251,7 +251,7 @@ public class GroupController {
 
     @PostMapping(path = "/{groupID}/{postID}/addTag")
     public boolean addTagToPost(@Valid @RequestBody TokenAndTag tokenAndTag, BindingResult bindingResult,
-                                 @PathVariable Integer groupID,@PathVariable Integer postID) {
+                                 @PathVariable Integer groupID, @PathVariable Integer postID) {
         Group groupById = getGroupById(groupID);
         User user = tokenService.getUser(tokenAndTag.getToken().getToken());
         Post postById = getPostById(groupById, postID);

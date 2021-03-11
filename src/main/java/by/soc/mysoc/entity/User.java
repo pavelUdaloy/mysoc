@@ -29,7 +29,7 @@ public class User {
     private Date birthDate = new Date();
     private Role role = new Role(Role.ROLE.USER, 1);
     @NotNull
-    @Email(regexp = "/^(([^<>()\\[\\]\\.,;:\\s@\\\"]+(\\.[^<>()\\[\\]\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@(([^<>()[\\]\\.,;:\\s@\\\"]+\\.)+[^<>()[\\]\\.,;:\\s@\\\"]{2,})$/i")
+    @Email (regexp = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$")
     private String email;
     @NotNull
     @Length(min = 8, max = 8)

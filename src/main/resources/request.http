@@ -22,7 +22,7 @@ POST http://localhost:8080/logout
 Content-Type: application/json
 
 {
-  "token": 7563141
+  "token": 9040326
 }
 
 ###
@@ -30,7 +30,7 @@ POST http://localhost:8080/feed
 Content-Type: application/json
 
 {
-  "token": 4051923
+  "token": 7782651
 }
 
 ###
@@ -39,7 +39,7 @@ Content-Type: application/json
 
 {
   "token": {
-    "token": 7942510
+    "token": 2819761
   },
   "firstName": "newFirst",
   "lastName": "newLastName",
@@ -48,7 +48,7 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:8080/3656787
+GET http://localhost:8080/3572772
 Content-Type: application/json
 
 ###
@@ -62,7 +62,7 @@ POST http://localhost:8080/chats
 Content-Type: application/json
 
 {
-  "token": 7942510
+  "token": 7782651
 }
 
 ###

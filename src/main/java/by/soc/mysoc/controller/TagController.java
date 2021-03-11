@@ -8,7 +8,6 @@ import by.soc.mysoc.service.GroupService;
 import by.soc.mysoc.service.TagService;
 import by.soc.mysoc.service.TokenService;
 import by.soc.mysoc.service.UserService;
-import javafx.geometry.Pos;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
